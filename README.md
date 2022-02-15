@@ -14,6 +14,9 @@ The practice will consist of:
 8. Assign an elastic IP to the network interface created in step 7
 9. Create Ubuntu server and install/enable apache2
 
+Requirements:
+- key pair: Is neccesary to access into our EC2 instance
+
 ## To reproduce this AWS configuration clone this repository and do...
 ~~~bash
 terraform init
@@ -69,3 +72,13 @@ Definition order in terraform beetwen both resources doesn't matter.
 - terraform directory: created when init command is executed, this directory contains all necesary plugins to run configuration and connect with provider.
 
 - terraform.tfstate: saves previus state of configuration that we do in the provider cloud, this file is important because if is not there, resources will upload again and then this resources will be duplicated
+
+## Practice Notes
+
+### Principal troubleshooting
+When I tried to upload my configuration to provider, CLI threw me this error: ***Error: The terraform-provider-aws v4.0.0_x5 plugin crashed!***.
+This error comes from my variables, these were not stablished into my PATH and terraform CLI doesn't recognize that.
+
+While I was doing the practice I thougth in change the instance type to Amazon Machine Image, this changes many things like a instance user, apache2 installation method and package manager, so I had to go back to previusly configuration on ubuntu server instance, then run successfully.
+
+I had many syntax errors and some of them were not displayed by "plan" command but in the "apply" command these errors did appear.
