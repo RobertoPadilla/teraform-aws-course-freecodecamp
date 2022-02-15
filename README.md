@@ -1,5 +1,18 @@
-# Configure AWS resources from Terraform
+# Automatic deployment of AWS resources with Terraform
 I will be following freecodecamp course to raise resources in AWS from terraform.
+
+In the master branch are my first notes and configuration file while learn the basic. Into the practice-project branch are my practice that I did in the course.
+
+The practice will consist of:
+1. Create vpc
+2. Create Internet Gateway
+3. Create Custom Route Table
+4. Create a Subnet
+5. Associate subnet with Route Table
+6. Create Security Group to allow port 22,80,443
+7. Create a network interface with an ip in the subnet that was created in step 4
+8. Assign an elastic IP to the network interface created in step 7
+9. Create Ubuntu server and install/enable apache2
 
 ## To reproduce this AWS configuration clone this repository and do...
 ~~~bash
