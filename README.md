@@ -1,7 +1,7 @@
 # Configure AWS resources from Terraform
 I will be following freecodecamp course to raise resources in AWS from terraform.
 
-## Clone this repository and do...
+## To reproduce this AWS configuration clone this repository and do...
 ~~~bash
 terraform init
 
@@ -27,16 +27,26 @@ terraform plan -var "var_name=var_value"
 terraform apply
 # This command also allows you to pass variables
 terraform apply -var "var_name=var_value"
+# If you tired to write "yes" when you update changes also can you pass this flag
+terraform apply --auto-approve
 ~~~
 ~~~bash
 # Destroy our resources. If we have variables command ask for their values
 terraform destroy
 # This command also allows you to pass variables
 terraform destroy -var "var_name=var_value"
+# If you tired to write "yes" when you destroy resources also can you pass this flag
+terraform destroy --auto-approve
 ~~~
 
 ## Notes
 
+### Upload and Destroy resources
+
 Terraform knows if you deleted some resource from provider, if you run *terraform plan* after delete this resource from provider console, cli recognize that and this will upload resoruce again, and if you do changes in the configuration file, this also will be upload to provider. If you don't delete this resource and runs *terraform plan* again, cli notifies you that you haven't made any changes.
 
-If you delete a resource block on terraform file and this resource is running in the provider cli asumes that this resource also must be eliminated from provider. If you run again apply command you destroy that resource.
+If you delete a resource block on terraform file and this resource is running in the provider cli assumes that this resource also must be eliminated from provider. If you run again apply command you destroy that resource.
+
+### Resources attached to another resources
+
+Definition order in terraform beetwen both resources doesn't matter.
