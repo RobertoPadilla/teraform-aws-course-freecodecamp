@@ -19,6 +19,6 @@ resource "aws_instance" "terraform-test" {
   instance_type = "t2.micro"
 
   tags = {
-    "from" = "terraform"
+    "from" = "terraform-config"
   }
 }
