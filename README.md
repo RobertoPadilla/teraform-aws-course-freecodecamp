@@ -1,7 +1,7 @@
 # Automatic deployment of AWS resources with Terraform
 I will be following freecodecamp course to raise resources in AWS from terraform.
 
-In the master branch are my first notes and configuration file while learn the basic. Into the practice-project branch are my practice that I did in the course.
+In the master branch are my first notes and configuration file while learning the basics. Into the practice-project branch are my practice that I did in the course.
 
 The practice will consist of:
 1. Create vpc
